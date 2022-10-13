@@ -22,9 +22,12 @@ function App() {
 
   const capture = () => {
     html2canvas(document.body, {
-      allowTaint: true
-      
-       
+      allowTaint: true,
+      scrollX: 0,
+    scrollY: -window.scrollY,
+    windowWidth: document.documentElement.offsetWidth,
+    windowHeight: document.documentElement.offsetHeight,
+    backgroundColor: null
     }).then(function (canvas) {
       //let canvas1 = document.createElement('canvas');
 
@@ -61,7 +64,7 @@ function App() {
       <div id="capture">
         <Quote quote={quote} />
         
-<div className="buttonDiv">
+<div data-html2canvas-ignore className="buttonDiv">
 
   <button data-html2canvas-ignore onClick={generate}>
         Generate New Quote
@@ -70,8 +73,8 @@ function App() {
         Save Quote
       </button>
 </div>
-     
-      </div>
+</div>
+      
     </div>
   );
 }

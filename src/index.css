@@ -12,6 +12,7 @@
   --font-quote: 'Yuji Syuku', serif;
 }
 
+
 *{
   margin: 0;
   padding: 0;
@@ -21,7 +22,8 @@
 }
 
 body{
- background: url('C:\Dev\ronswanson_qg\public\photos\mountains-and-blue-lake.jpg') no-repeat center center fixed;
+  
+  background: url('C:\Dev\ronswanson_qg\public\photos\mountains-and-blue-lake.jpg') no-repeat center center fixed;
  background-repeat:no-repeat;
 background-size:cover;
 background-position:center;
@@ -42,6 +44,8 @@ z-index: 1;
 margin-left: auto;
   margin-right: auto;
   margin-top: 10vh;
+
+  
 }
 
 .allQuote{
@@ -121,7 +125,7 @@ padding: 0.5rem 0.5rem;
   position: relative;
   
  
-max-width: 30%;
+max-width: 40%;
 
 transform: translate(40%, 0%);
 
