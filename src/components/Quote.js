@@ -1,8 +1,6 @@
 import React from "react";
 
-// <div className="anime">
-//<img src="./photos/ron.png" alt="Computer Man" className="ron" ></img>
-//</div>
+
 function Quote({ quote }) {
   return (
     <div className="allQuote">
