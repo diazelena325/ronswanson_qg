@@ -4,6 +4,11 @@ Save your favorite Ron Swanson quote from tv show Parks and Recreation. Demo can
 
 Using React, HTML2CANVAS, and API from [James Wright](https://github.com/jamesseanwright/ron-swanson-quotes)
 
+Instructions:
+1. Generate quote with button: Generate New Quote
+2. To save image, select button: Save Quote. This will take a screenshot and save in PNG format.
+3. Enjoy!
+
 -------------------------------------------------------------------------------
 # Getting Started with Create React App
 
