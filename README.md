@@ -1,7 +1,7 @@
 ![Ron Quote Example](https://github.com/diazelena325/ronswanson_qg/blob/main/ronQuoteExample.png)
 # Ron Swanson Quote Generator
 
-Save your favorite Ron Swanson quote from tv show Parks and Recreation. Demo can be found [here](https://projects.elenadiaz.space/)
+Save your favorite Ron Swanson quote from tv show Parks and Recreation.
 
 Using React, HTML2CANVAS, and API from [James Wright](https://github.com/jamesseanwright/ron-swanson-quotes)
 
