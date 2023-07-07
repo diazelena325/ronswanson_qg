@@ -128,7 +128,7 @@ blockquote {
 	font-family: var(--font-sig);
 	background-color: var(--black);
 	font-size: 2vw;
-
+	margin-top: 1rem;
 	-ms-transform: translate(0%, 0%);
 	transform: translate(0%, 0%);
 }
