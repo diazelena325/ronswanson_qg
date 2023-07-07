@@ -1,170 +1,181 @@
-:root{
-  --primary: rgb(28, 39, 61, .8);
-  --secondary: #f70c95;
-  --third: #f7b32b;
-  --dark: rgb(53, 49, 49, .4);
-  --light: #f5f5f5;
-  --grey: #838383;
-  --black: #000;
+:root {
+	--primary: rgb(28, 39, 61, 0.8);
+	--secondary: #f70c95;
+	--third: #f7b32b;
+	--dark: rgba(53, 49, 49, 0.664);
+	--light: #f5f5f5;
+	--grey: #838383;
+	--black: #000000;
 
-  --font: 'Flamenco', cursive;
-  --font-sig:'Permanent Marker', cursive;
-  --font-quote: 'Yuji Syuku', serif;
+	--font: "Flamenco", cursive;
+	--font-sig: "Permanent Marker", cursive;
+	--font-quote: "Yuji Syuku", serif;
 }
 
-
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: var(--font);
-  
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: var(--font);
 }
 
-body{
-  
-  background: url('C:\Dev\ronswanson_qg\public\photos\mountains-and-blue-lake.jpg') no-repeat center center fixed;
- background-repeat:no-repeat;
-background-size:cover;
-background-position:center;
+body {
+	display: flex;
+	min-height: 100vh;
+	background-image: url("C:\Dev\ronswanson_qg\public\photos\mountains-and-blue-lake.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	flex-wrap: wrap;
+	flex-direction: column;
+
+	justify-content: start;
+	align-items: center;
 }
 
-.App{
-  display: flex;
-  flex-direction: column;
-  position: relative;
- width: 80%;
-align-content: center;
-justify-content: center;
-  
+.App {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	width: 80%;
+	align-content: center;
+	justify-content: center;
+	place-items: center;
 
-overflow: hidden;
-z-index: 1;
+	overflow: hidden;
+	z-index: 1;
 
-margin-left: auto;
-  margin-right: auto;
-  margin-top: 10vh;
-
-  
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10vh;
 }
 
-.allQuote{
-  display: flex;
-  flex-direction: row;
-  position: relative;
- 
-  max-width: 80%;
-  z-index: -1;
+.Title {
+	font-family: var(--font-quote);
+	font-size: clamp(1rem, 6vw + 1rem, 4rem);
+	font-weight: bold;
+	text-align: center;
+	text-shadow: 2px 2px 5px var(--third);
+}
+/*flex-direction: row;*/
+.allQuote {
+	display: flex;
 
-justify-content: center;
-align-items:center;
-margin-left: auto;
-  margin-right: auto;
+	position: relative;
 
+	z-index: -1;
 
+	justify-content: center;
+	align-items: center;
+	margin-left: auto;
+	margin-right: auto;
+	flex-wrap: wrap;
+}
+@media (min-width: 35em) {
+	.allQuote {
+		flex-direction: row;
+		width: 80%;
+		flex-wrap: nowrap;
+	}
 }
 
-.quote{
-display: inline-block;
-   max-width: 50%;
-   
+.quote {
+	display: flex;
+	align-items: flex-end;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-content: flex-end;
+	justify-content: flex-start;
 }
 
-blockquote{
-font-family: var(--font-quote);
-font-weight: 400;
-max-width: 100%;
-font-size: 2vw;
-background-color: var(--dark);
-padding: 1rem ;
-border-radius: 1.5rem;
-color: var(--light);
-z-index: 1;
+blockquote {
+	font-family: var(--font-quote);
+	font-weight: 400;
+	max-width: 100%;
+	font-size: clamp(1rem, 8vw + 1rem, 2rem);
+	background-color: var(--dark);
+	padding: 1rem;
+	border-radius: 1.5rem;
+	color: var(--light);
+	z-index: 1;
 }
 
-.anime, .character{
-  display: inline-block;
-  padding: 0.5rem 1.5rem;
-  color: var(--light);
-  border-radius: 0.5rem;
-  font-weight: 700;
-  font-size: 1.4rem;
-  letter-spacing: 1px;
-  max-width: 360px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+.anime,
+.character {
+	display: inline-block;
+	padding: 0.5rem 1.5rem;
+	color: var(--light);
+	border-radius: 0.5rem;
+	font-weight: 700;
+	font-size: 1.4rem;
+	letter-spacing: 1px;
+	max-width: 360px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 
-
-.anime{
-  background-color: var(--primary);
-font-weight: 400;
-transform: translate(-95%, 30%);
-display: flex;
-padding: 0.5rem 0.5rem;
-  justify-content: center;
-
+.anime {
+	background-color: var(--primary);
+	font-weight: 400;
+	transform: translate(-95%, 30%);
+	display: flex;
+	padding: 0.5rem 0.5rem;
+	justify-content: center;
 }
 
-.character{
-  font-family: var(--font-sig);
-  background-color: var(--black);
- font-size: 2vw;
- 
+.character {
+	font-family: var(--font-sig);
+	background-color: var(--black);
+	font-size: 2vw;
 
- -ms-transform: translate(0%, 0%);
- transform: translate(0%, 0%);
-
+	-ms-transform: translate(0%, 0%);
+	transform: translate(0%, 0%);
 }
-.buttonDiv{
-  margin: 0;
-  
-  display: flex;
-  
-  position: relative;
-  
- 
-max-width: 40%;
-
-transform: translate(40%, 0%);
-
+.buttonDiv {
+	margin: 0;
+	display: flex;
+	position: relative;
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+	justify-items: center;
 }
 
+button {
+	appearance: none;
+	border: none;
+	outline: none;
 
-button{
-  
-  appearance: none;
-  border: none;
-  outline: none;
+	background-color: var(--third);
+	color: var(--black);
+	border-radius: 1rem;
+	padding: 0.5rem;
 
-  background-color: var(--third);
-  color: var(--black);
-  border-radius: 1rem;
-  padding: 0.5rem;
-  
-  margin: 10px;
- width: 100%;
-  
-  transition: 0.4s;
-  font-size: 1.5vw;
-  font-weight: 700;
-  cursor: pointer
-  
+	margin: 10px;
+	width: 100%;
+
+	transition: 0.4s;
+	font-size: 1.5rem;
+	font-weight: 700;
+	cursor: pointer;
 }
 
-button:hover{
-  background-color: var(--secondary);
+button:hover {
+	background-color: var(--secondary);
 }
 
-.mainChar{
-
-  -ms-transform: translate(0%, 0%);
-  transform: translate(0%, 0%);
- 
+.mainChar {
+	-ms-transform: translate(0%, 0%);
+	transform: translate(0%, 0%);
+	min-width: 30%;
 }
 
-.ron{
-width: 100%;  
+.ron {
+	width: 100%;
+}
 
+.signature {
+	font-family: var(--font-sig);
+	font-size: clamp(0.5rem, 1vw + 1rem, 3rem);
 }
