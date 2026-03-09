@@ -1,87 +1,79 @@
-![Ron Quote Example](https://github.com/diazelena325/ronswanson_qg/blob/main/ronQuoteExample.png)
 # Ron Swanson Quote Generator
 
-Save your favorite Ron Swanson quote from tv show Parks and Recreation.
+A React application that fetches and displays random Ron Swanson quotes from Parks and Recreation.  
+Users can generate new quotes and save their favorites as PNG images using HTML2Canvas.
 
-Using React, HTML2CANVAS, and API from [James Wright](https://github.com/jamesseanwright/ron-swanson-quotes)
+![Ron Swanson Quote Generator](https://github.com/diazelena325/ronswanson_qg/blob/main/ronQuoteExample.png)
 
-## Instructions
-1. Generate quote with button: Generate New Quote
-2. To save image, select button: Save Quote. This will take a screenshot and save in PNG format.
-3. Enjoy!
+---
 
+## Project Status
 
-## Currently Working On
-Working on the ability to select the size when saving a quote. Also, making it more dynamic to be able to change the background and Ron Image. 
+`In Progress` — Core functionality complete. Image export size customization in development.
 
--------------------------------------------------------------------------------
-# Getting Started with Create React App
+---
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Overview
 
-## Available Scripts
+This project explores client-side image generation by combining a public REST API with HTML2Canvas to capture and export UI elements as downloadable images.  
+Built as a lightweight React exercise focused on API integration and browser-based image export.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Features & Functionality
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Fetches random Ron Swanson quotes from a public API on demand
+- Renders each quote as a styled card
+- Exports the current quote card as a PNG image using HTML2Canvas
+- One-click save — no server required for image generation
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Frontend**
+- React
+- JavaScript
+- CSS
 
-### `npm run build`
+**Libraries**
+- [HTML2Canvas](https://html2canvas.hertzen.com) — client-side DOM-to-image capture
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Data**
+- [Ron Swanson Quotes API](https://github.com/jamesseanwright/ron-swanson-quotes) by James Wright
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Engineering Notes
 
-### `npm run eject`
+**Client-side image export with HTML2Canvas**  
+Rather than generating images server-side, HTML2Canvas captures the rendered DOM element directly in the browser and converts it to a PNG for download. This keeps the implementation entirely client-side with no backend dependency.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Setup Instructions
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+**Clone the repository**
+```bash
+git clone https://github.com/diazelena325/ronswanson_qg.git
+cd ronswanson_qg
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+**Install dependencies**
+```bash
+npm install
+```
 
-## Learn More
+**Start development server**
+```bash
+npm start
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Open your browser at `http://localhost:3000`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Click **Generate New Quote** to fetch a random Ron Swanson quote
+2. Click **Save Quote** to download the current quote card as a PNG image
